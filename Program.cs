@@ -69,19 +69,22 @@
 //BONUS "2
 //Creare una funzione in grado di cercare il numero più piccolo all'interno di un array di interi positivi e maggiori di 0, senza la possibilità di usare cicli e senza variabili "globali"
 
-int[] array = { 2, 6, 7, 5, 1, 9, 3};
+int[] array = { 2, 6, 7, 5, 9, 3, 1};
 CheckMinNumber(array);
 
 int CheckMinNumber(int[] array)
 {
-    int sum = array[0] + array[2] + array[3] + array[4] + array[5] + array[6];
+    int sum = array[0] + array[1] + array[2] + array[3] + array[4] + array[5] + array[6];
     
-    int a = sum - array[1];
-    int b = sum - array[2];
-    int c = sum - array[3];
-    int d = sum - array[4];
-    int e = sum - array[5];
-    int f = sum - array[6];
+    int a = sum - array[0];
+    int b = sum - array[1];
+    int c = sum - array[2];
+    int d = sum - array[3];
+    int e = sum - array[4];
+    int f = sum - array[5];
+    int g = sum - array[6];
+
+
 
     int max = a;
     if (b > max) max = b;
@@ -89,6 +92,8 @@ int CheckMinNumber(int[] array)
     if (d > max) max = d;
     if (e > max) max = e;
     if (f > max) max = f;
+    if (g > max) max = g;
+
     int numeroMinore = sum - max;
     Console.WriteLine("il numero minore è: " + numeroMinore);
     return numeroMinore;

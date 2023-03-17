@@ -20,10 +20,10 @@ int[] squaredNumbers = ElevaArrayAlQuadrato(numbers);
 StampaArray(squaredNumbers);
 
 int somma = sommaElementiArray(numbers);
-Console.WriteLine($"La somma degli elementi è {somma}");
+Console.WriteLine($"La somma degli elementi del primo array è {somma}");
 
 int sommaQuadrati = sommaElementiArray(squaredNumbers);
-Console.WriteLine($"La somma dei quadrati degli elementi è {sommaQuadrati}");
+Console.WriteLine($"La somma dei quadrati degli elementi del secondo array è {sommaQuadrati}");
 
 void StampaArray(int[] numbers)
 {
@@ -65,3 +65,8 @@ int sommaElementiArray(int[] numbers)
     }
     return somma;
 }
+
+//BONUS "2
+//Creare una funzione in grado di cercare il numero più piccolo all'interno di un array di interi positivi e maggiori di 0, senza la possibilità di usare cicli e senza variabili "globali"
+
+int[] array = { 2, 6, 7, 5, 1, 9, 3};

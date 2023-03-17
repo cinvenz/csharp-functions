@@ -2,10 +2,16 @@
 
 StampaArray(numbers);
 
-void StampaArray(int[] numbers)
+static void StampaArray(int[] numbers)
 {
-    foreach (int number in numbers)
+    Console.Write("[");
+    for (int i = 0; i < numbers.Length; i++)
     {
-        Console.Write("elemento " + number + ", ");
+        Console.Write(numbers[i]);
+        if (i != numbers.Length - 1)
+        {
+            Console.Write(", ");
+        }
     }
+    Console.Write("]");
 }

@@ -10,6 +10,12 @@ Console.WriteLine($"Il quadrato di {numero} è {quadrato}");
 int[] squaredNumbers = ElevaArrayAlQuadrato(numbers);
 StampaArray(squaredNumbers);
 
+int somma = sommaElementiArray(numbers);
+Console.WriteLine($"La somma degli elementi è {somma}");
+
+int sommaQuadrati = sommaElementiArray(squaredNumbers);
+Console.WriteLine($"La somma dei quadrati degli elementi è {sommaQuadrati}");
+
 void StampaArray(int[] numbers)
 {
     Console.Write("[");
@@ -39,4 +45,14 @@ int[] ElevaArrayAlQuadrato(int[] numbers)
         newArray[i] = numbers[i] * numbers[i];
     }
     return newArray;
+}
+
+int sommaElementiArray(int[] numbers)
+{
+    int somma = 0;
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        somma += numbers[i];
+    }
+    return somma;
 }

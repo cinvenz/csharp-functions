@@ -7,6 +7,9 @@ int numero = int.Parse(Console.ReadLine());
 int quadrato = Quadrato(numero);
 Console.WriteLine($"Il quadrato di {numero} è {quadrato}");
 
+int[] squaredNumbers = ElevaArrayAlQuadrato(numbers);
+StampaArray(squaredNumbers);
+
 void StampaArray(int[] numbers)
 {
     Console.Write("[");
@@ -25,4 +28,15 @@ void StampaArray(int[] numbers)
 int Quadrato(int numero)
 {
     return numero * numero;
+}
+
+
+int[] ElevaArrayAlQuadrato(int[] numbers)
+{
+    int[] newArray = new int[numbers.Length];
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        newArray[i] = numbers[i] * numbers[i];
+    }
+    return newArray;
 }

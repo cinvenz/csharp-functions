@@ -1,4 +1,4 @@
-﻿var numbers = new int[] { 2, 4, 5, 9, 3, 1, };
+﻿var numbers = new int[] { 2, 6, 7, 5, 3, 9 };
 
 StampaArray(numbers);
 

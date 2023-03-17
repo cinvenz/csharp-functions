@@ -1,11 +1,20 @@
-﻿var numbers = new int[] { 2, 6, 7, 5, 3, 9 };
+﻿//var numbers = new int[] { 2, 6, 7, 5, 3, 9 };
+
+Console.WriteLine("Quanti numeri vuoi inserire?");
+int insertNum = int.Parse(Console.ReadLine());
+
+int[] numbers = new int[insertNum];
+for (int i = 0; i < insertNum; i++)
+{
+    Console.WriteLine($"Inserisci il {i + 1}° numero:");
+    numbers[i] = int.Parse(Console.ReadLine());
+    int quadrato = Quadrato(numbers[i]);
+    Console.WriteLine($"Il quadrato di {numbers[i]} è {quadrato}");
+}
 
 StampaArray(numbers);
 
-Console.Write("Inserisci un numero: ");
-int numero = int.Parse(Console.ReadLine());
-int quadrato = Quadrato(numero);
-Console.WriteLine($"Il quadrato di {numero} è {quadrato}");
+
 
 int[] squaredNumbers = ElevaArrayAlQuadrato(numbers);
 StampaArray(squaredNumbers);
